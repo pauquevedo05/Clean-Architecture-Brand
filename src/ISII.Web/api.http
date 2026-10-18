@@ -52,5 +52,33 @@ Content-Type: application/json
 ### Note: Get order ID from response for future use
 
 
+### Get Brand By ID
+GET {{MinimalClean_HostAddress}}/Brands/1
+Accept: application/json
+
+### Create Brand
+POST {{MinimalClean_HostAddress}}/Brands
+Content-Type: application/json
+
+{
+  "name": "Marca de ejemplo",
+  "country": "Argentina",
+  "foundedYear": 2020
+}
+
+### Get Brand By ID - Not Found
+GET {{MinimalClean_HostAddress}}/Brands/999
+Accept: application/json
+
+### Create Brand - Invalid Name
+POST {{MinimalClean_HostAddress}}/Brands
+Content-Type: application/json
+
+{
+  "name": "",
+  "country": "Argentina",
+  "foundedYear": 2020
+}
+
 
 

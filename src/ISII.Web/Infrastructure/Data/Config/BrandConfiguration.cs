@@ -13,7 +13,7 @@ public class BrandConfiguration : IEntityTypeConfiguration<Brand>
       .HasVogenConversion()
       .IsRequired();
 
-   
+
     builder.Property(entity => entity.Name)
       .HasMaxLength(Brand.NameMaxLength)
       .IsRequired();
